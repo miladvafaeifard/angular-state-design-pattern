@@ -1,5 +1,13 @@
 @import './components/light/light.component.scss';
 
 p {
-  font-family: Lato;
+    font-family: Lato;
+}
+
+
+:host /deep/ 
+pattern {
+    h1 {
+        color: $sudo_green;
+    }
 }
