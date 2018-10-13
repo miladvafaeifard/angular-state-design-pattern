@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { SWITCH } from './constant';
 
 @Component({
   selector: 'light',
@@ -7,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class LightComponent {
   @Input() status: string;
+  isON = SWITCH.ON;
 }
