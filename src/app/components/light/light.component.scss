@@ -1,0 +1,68 @@
+$sudo_green:#50e2c2;
+$deep_blue:#23263a;
+$bulb_size: 50vh;
+$bulb_yellow:#ffff79;
+$bulb_side_yellow:#ffff00;
+$bulb_face: #657883;
+.bulb {
+    display: block;
+    color: black;
+    margin: 0 auto;
+    width: $bulb_size;    
+    height: $bulb_size*1.2;
+    background: #bbb;
+    border-radius:  40% 40% 2px 2px;
+    .eyes {
+        width: 100%;
+        * {
+            margin: 0.1*$bulb_size;
+            margin-top: 0.2*$bulb_size;
+            display: inline-block;
+            width: 0.1*$bulb_size;
+            height: 0.1*$bulb_size;
+            background-color: $bulb_face;
+            border-radius: 50%;
+        }
+    }
+    .mouth {
+        margin: 0 auto;
+        margin-top: 4px;
+        width: 0.4*$bulb_size;
+        height: 0.2*$bulb_size;
+        background: $bulb_face;
+        border: none;
+        border-radius: 0.6*$bulb_size 0.6*$bulb_size 0.2*$bulb_size 0.2*$bulb_size;
+        -moz-transition: all .51s;
+        -o-transition: all .51s;
+        -webkit-transition: all .51s;
+        transition: all .51s;
+    }
+}
+.bulb.light_up {
+    box-shadow: 0 -10px 100px $bulb_side_yellow;
+    background: $bulb_yellow;
+    .mouth {
+        background: $bulb_face;
+        border: none;
+        border-radius:0.2*$bulb_size  0.2*$bulb_size  0.6*$bulb_size 0.6*$bulb_size;
+        
+    }
+}
+#light {
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    width: 20%;
+    border: 2px $sudo_green solid;
+    color: $sudo_green;
+    letter-spacing: 5px;
+    &:hover {
+        background: $sudo_green;
+        color: white;
+    }
+}
+h1, p {
+    color: $sudo_green;
+    text-align: center;
+}
